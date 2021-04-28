@@ -1,0 +1,26 @@
+<h3>Employee Form</h3>
+
+<%= form_for(@employee) do |f| %>
+  <label>Employee first name:</label><br>
+  <%= f.text_field :first_name %><br>
+
+  <label>Employee last name:</label><br>
+  <%= f.text_field :last_name %><br>
+
+  <label>Employee alias:</label><br>
+  <%= f.text_field :alias %><br>
+
+  <label>Employee title:</label><br>
+  <%= f.text_field :title %><br>
+
+  <label>Employee office:</label><br>
+  <%= f.text_field :office %><br>
+
+  <label>Employee img_url:</label><br>
+  <%= f.text_field :img_url %><br>
+
+  <label>Employee dog:</label><br>
+  <%= f.collection_select :dog_id, Dog.all, :id, :name, prompt: true %><br />
+
+  <%= f.submit %>
+<% end %>

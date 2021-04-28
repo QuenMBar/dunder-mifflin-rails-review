@@ -1,0 +1,8 @@
+
+<ul>
+  <% @employees.each do |employee| %>
+    <li><%= link_to employee.full_name, employee_path(employee) %></li>
+  <% end %>
+
+  <%= link_to 'New', new_employee_path %>
+</ul>
